@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS db_shearconnections;
+DROP DATABASE IF EXISTS shearconnections_db;
 
-CREATE DATABASE db_shearconnections;
+CREATE DATABASE shearconnections_db;
