@@ -1,4 +1,4 @@
-const { Cosmo } = require('../models');
+const Cosmo = require('../models/Cosmo');
 
 const cosmodata = [
     {
@@ -15,4 +15,4 @@ const cosmodata = [
   
   const seedCosmo = () => Cosmo.bulkCreate(cosmodata);
   
-  seedCosmo();
+  module.export = seedCosmo;
