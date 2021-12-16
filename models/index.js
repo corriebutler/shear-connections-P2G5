@@ -1,3 +1,8 @@
-const Cosmo = require('./Cosmo')
+const Cosmo = require('./Cosmo');
+const Rating = require('./Rating');
 
-module.exports = { Cosmo }
+Cosmo.hasMany(Rating, {
+    foreignKey: 'user_name'
+});
+
+module.exports = { Cosmo, Rating };

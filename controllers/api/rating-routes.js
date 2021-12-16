@@ -1,8 +1,8 @@
 const router = require('express').Router();
-const sequelize = require('../config/connection');
+const { Cosmo, Rating } = require('../../models');
 
 router.get('/', (req, res) => {
-    res.json({ 'message': 'hello' });
+    res.json({ message: 'hello' });
 });
 
 module.exports = router;
