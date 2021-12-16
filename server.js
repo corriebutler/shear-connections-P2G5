@@ -6,7 +6,7 @@ const routes = require('./controllers');
 
 const sequelize = require('./config/connection')
 
-const { Cosmo } = require('./models')
+const { Cosmo, Rating } = require('./models')
 // const seedAll = require('./seeds')
 
 const app = express();
