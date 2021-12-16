@@ -5,6 +5,9 @@ const express = require('express');
 
 const sequelize = require('./config/connection')
 
+const { Cosmo } = require('./models')
+// const seedAll = require('./seeds')
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 

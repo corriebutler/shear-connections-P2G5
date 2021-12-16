@@ -45,7 +45,8 @@ Cosmo.init (
         sequelize,
         freezeTableName: true,
         underscored: true,
-        modelName: 'cosmo',
+        modelName: 'Cosmo',
+        timestamps: false
       }
 );
 
