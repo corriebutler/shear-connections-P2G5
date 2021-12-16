@@ -2,8 +2,29 @@ const router = require('express').Router();
 const { Cosmo, Rating } = require('../../models');
 
 router.get('/', (req, res) => {
-    res.json({ message: "hello" })
-});
+    Cosmo.findAll().then((cosmoData) => {
+      res.json(cosmoData);
+    });
+  });
+
+  router.get('/:id', (req, res) => {
+    Cosmo.findByPk(req.params.id).then((cosmoData) => {
+      res.json(cosmoData);
+    });
+  });
+
+  //get route for all cosmos in a city
+
+  router.get('/:city', (req, res) => {
+    Cosmo.findAll({
+      order: ['name'],
+      where: {
+        location: req.params.city
+      }
+    }).then((bookData) => {
+      res.json(bookData);
+    });
+  });
 
 router.post('/', (req, res) => {
     Cosmo.create(req.body)
