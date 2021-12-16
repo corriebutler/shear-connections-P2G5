@@ -14,8 +14,7 @@ router.get('/', (req, res) => {
   });
 
   //get route for all cosmos in a city
-
-  router.get('/:city', (req, res) => {
+  router.get('/city/:city', (req, res) => {
     Cosmo.findAll({
       order: ['name'],
       where: {
