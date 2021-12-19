@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+</head>
+
+<body>
+    <div class="modal active" id="modal-id"><button>Open</button>
+        <a href="#close" class="modal-overlay" aria-label="Close"></a>
+        <div class="modal-container">
+            <div class="modal-header">
+                <a href="#close" class="btn btn-clear float-right" aria-label="Close"></a>
+                <div class="modal-title h5">Scheduling</div>
+                <div>Fill in the following to start the Scheduling process. Your selected professional will reach out
+                    with availability!</div>
+            </div>
+            <div class="modal-body">
+                <div class="content">
+                    <!-- form structure -->
+                    <form class="scheduling-form">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="fn-input" placeholder="First Name">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="ln-input" placeholder="Last Name">
+                        <label for="mobile-number">Mobile Number</label>
+                        <input type="text" id="mn-input" placeholder="Mobile Number">
+                        <label for="email">Email</label>
+                        <input type="text" id="email-input" placeholder="Email">
+                        <div>
+                            <label for="service-type">What service are you looking for?</label> <br>
+                            <input type="checkbox" id="service1">
+                            <label for="service1">Full Barber</label>
+                            <input type="checkbox" id="service2">
+                            <label for="service2">Men's Hair Cut</label>
+                            <input type="checkbox" id="service3">
+                            <label for="service3">Shave</label>
+                            <input type="checkbox" id="service4">
+                            <label for="service4">Women's Hair Cut</label>
+                            <input type="checkbox" id="service5">
+                            <label for="service5">Color Service (Full Head)</label>
+                            <input type="checkbox" id="service6">
+                            <label for="service6">Color Service (Streaks or Ballage)</label>
+                            <input type="checkbox" id="service7">
+                            <label for="service7">Nail Technician</label>
+                            <input type="checkbox" id="service8">
+                            <label for="service8">Hairstylist (Wedding or Event)</label>
+                            <input type="checkbox" id="service9">
+                            <label for="service9">Make-up Artist</label>
+                            <input type="checkbox" id="service10">
+                            <label for="service10">Eyelash Extensions</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            ...
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
