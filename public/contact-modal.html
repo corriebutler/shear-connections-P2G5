@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/modal-style.css">
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
@@ -23,46 +24,93 @@
             </div>
             <div class="modal-body">
                 <span class="content">
-                    <!-- form structure -->
-                    <form class="scheduling-form">
-                        <label for="first-name">First Name</label>
-                        <input type="text" id="fn-input" placeholder="First Name">
-                        <label for="last-name">Last Name</label>
-                        <input type="text" id="ln-input" placeholder="Last Name">
-                        <label for="mobile-number">Mobile Number</label>
-                        <input type="text" id="mn-input" placeholder="Mobile Number">
-                        <label for="email">Email</label>
-                        <input type="text" id="email-input" placeholder="Email">
-                        <div>
-                            <label for="service-type">What service are you looking for?</label> <br>
-                            <input type="checkbox" id="service1">
-                            <label for="service1">Full Barber</label>
-                            <input type="checkbox" id="service2">
-                            <label for="service2">Men's Hair Cut</label>
-                            <input type="checkbox" id="service3">
-                            <label for="service3">Shave</label>
-                            <input type="checkbox" id="service4">
-                            <label for="service4">Women's Hair Cut</label>
-                            <input type="checkbox" id="service5">
-                            <label for="service5">Color Service (Full Head)</label>
-                            <input type="checkbox" id="service6">
-                            <label for="service6">Color Service (Streaks or Ballage)</label>
-                            <input type="checkbox" id="service7">
-                            <label for="service7">Nail Technician</label>
-                            <input type="checkbox" id="service8">
-                            <label for="service8">Hairstylist (Wedding or Event)</label>
-                            <input type="checkbox" id="service9">
-                            <label for="service9">Make-up Artist</label>
-                            <input type="checkbox" id="service10">
-                            <label for="service10">Eyelash Extensions</label>
+                    <form class="form-horizontal">
+                        <!-- Form Options -->
+                        <div class="form-group">
+                            <div class="col-3 col-sm-12">
+                                <label class="form-label" for="first-name">First Name</label>
+                            </div>
+                            <div class="col-9 col-sm-12">
+                                <input class="form-input" type="text" id="fn-input" placeholder="First Name">
+                            </div>
                         </div>
-                    </form>
-                </span>
+                        <div class="form-group">
+                            <div class="col-3 col-sm-12">
+                                <label class="form-label" for="last-name">Last Name</label>
+                            </div>
+                            <div class="col-9 col-sm-12">
+                                <input class="form-input" type="text" id="ln-input" placeholder="Last Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-3 col-sm-12">
+                                <label class="form-label" for="mobile-number">Mobile Number</label>
+                            </div>
+                            <div class="col-9 col-sm-12">
+                                <input class="form-input" type="text" id="mn-input" placeholder="Mobile Number">
+                            </div>
+                        </div>
+                        <div class="form-group text-permission">
+                            <label class="form-switch">
+                                <input type="checkbox">
+                                <i class="form-icon"></i> Does your stylist have permission to text you?
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-3 col-sm-12">
+                                <label class="form-label" for="email">Email</label>
+                            </div>
+                            <div class="col-9 col-sm-12">
+                                <input class="form-input" type="text" id="email-input" placeholder="Email">
+                            </div>
+                        </div>
+                        <label for="service-type">What services are you looking for? (Select Multiple if
+                            Desired)</label> <br>
+                        <div class="form-group checkboxes">
+                            <label class="form-checkbox form-inline">
+                                <input type="checkbox"><i class="form-icon"></i> Men's Hair Cut
+                            </label>
+                            <label class="form-checkbox form-inline">
+                                <input type="checkbox"><i class="form-icon"></i> Shave
+                            </label>
+                            <label class="form-checkbox form-inline">
+                                <input type="checkbox"><i class="form-icon"></i> Women's Hair Cut
+                            </label>
+                            <label class="form-checkbox form-inline">
+                                <input type="checkbox"><i class="form-icon"></i> Color Service (Full Head)
+                            </label>
+                            <label class="form-checkbox form-inline">
+                                <input type="checkbox"><i class="form-icon"></i> Color Service (Streaks or
+                                Ballage)
+                            </label>
+                            <label class="form-checkbox form-inline">
+                                <input type="checkbox"><i class="form-icon"></i> Nail Technician
+                            </label>
+                            <label class="form-checkbox form-inline">
+                                <input type="checkbox"><i class="form-icon"></i> Hairstylist (Wedding or
+                                Event)
+                            </label>
+                            <label class="form-checkbox form-inline">
+                                <input type="checkbox"><i class="form-icon"></i> Make-up Artist
+                            </label>
+                            <label class="form-checkbox form-inline">
+                                <input type="checkbox"><i class="form-icon"></i> Eyelash Extensions
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="comments">Any special comments or requests?</label>
+                            <textarea class="form-input" id="comments" placeholder="Add comments here..."
+                                rows="3"></textarea>
+                        </div>
+                        <button class="btn btn-primary" type="button" id="contact-btn">Submit</button>
             </div>
+            </form>
+            </span>
         </div>
-        <div class="modal-footer">
-            ...
-        </div>
+    </div>
+    <div class="modal-footer">
+        ...
+    </div>
     </div>
     </div>
 
