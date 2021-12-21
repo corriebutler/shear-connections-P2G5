@@ -2,12 +2,12 @@ const Rating = require('../models/Rating');
 
 const ratingdata = [
     {
-      id: 1,
       value: 5,
+      cosmo_id: 1
     }
     
   ];
   
   const seedRating = () => Rating.bulkCreate(ratingdata);
   
-  module.export = seedRating;
+  module.exports = seedRating;

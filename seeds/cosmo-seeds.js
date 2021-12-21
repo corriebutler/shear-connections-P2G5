@@ -15,4 +15,4 @@ const cosmodata = [
   
   const seedCosmo = () => Cosmo.bulkCreate(cosmodata);
   
-  module.export = seedCosmo;
+  module.exports = seedCosmo;
