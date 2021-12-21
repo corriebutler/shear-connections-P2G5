@@ -1,8 +1,14 @@
 const Cosmo = require('./Cosmo');
 const Rating = require('./Rating');
 
-Cosmo.hasMany(Rating, {
-    foreignKey: 'user_name'
+Rating.belongsTo(Cosmo, {
+    foreignKey: 'cosmo_id'
 });
+
+Cosmo.hasMany(Rating, {
+    foreignKey: 'cosmo_id'
+});
+
+
 
 module.exports = { Cosmo, Rating };
