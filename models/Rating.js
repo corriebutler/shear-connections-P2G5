@@ -17,6 +17,13 @@ Rating.init(
             values: [1, 2, 3, 4, 5],
             allowNull: false
         },
+        comment: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                len: [5]
+            }
+        },
         cosmo_id: {
             type: DataTypes.INTEGER,
             allowNull: false,

@@ -9,6 +9,24 @@ const cosmodata = [
       specialties: 'this or that',
       location: 'SoJo',
       cosmo_bio: 'stuff'
+    },
+    {
+      name: 'Marcus Ikegami',
+      user_name: 'MI',
+      password: '1234567',
+      contact_info: 'asdfasdfdsfajdhfaj',
+      specialties: 'this and sometimes that',
+      location: 'SLC',
+      cosmo_bio: 'I am so pretty'
+    },
+    {
+      name: 'Connor Lawrence',
+      user_name: 'CL',
+      password: 'easypassword',
+      contact_info: 'carrier pigeon',
+      specialties: 'nose injections',
+      location: 'Idaho',
+      cosmo_bio: 'things'
     }
     
   ];
