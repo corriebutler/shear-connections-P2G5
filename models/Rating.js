@@ -21,7 +21,7 @@ Rating.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: 'Cosmo',
+                model: 'cosmo',
                 key: 'id'
             }
         }
