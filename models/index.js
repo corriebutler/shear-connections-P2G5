@@ -1,12 +1,12 @@
 const Cosmo = require('./Cosmo');
 const Rating = require('./Rating');
 
-// Rating.belongsTo(Cosmo, {
-//     foreignKey: 'cosmo_id'
-// });
+Rating.belongsTo(Cosmo, {
+    foreignKey: 'cosmo_id'
+});
 
 Cosmo.hasMany(Rating, {
-    foreignKey: 'user_name'
+    foreignKey: 'cosmo_id'
 });
 
 
