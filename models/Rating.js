@@ -18,11 +18,11 @@ Rating.init(
             allowNull: false
         },
         cosmo_id: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             allowNull: false,
             references: {
                 model: 'Cosmo',
-                key: 'user_name'
+                key: 'id'
             }
         }
     },
