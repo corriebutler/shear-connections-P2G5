@@ -9,19 +9,41 @@ function cosmoFormSubmission(event) {
     const first_nameEl = document.querySelector("#fn-input").value;
     const last_nameEl = document.querySelector("#ln-input").value;
     const user_nameEl = document.querySelector("#un-input").value;
-    const passwordEL = document.querySelector("#pw-input").value;
-    const mobile_numberEL = document.querySelector("#mn-input").value;
-    const emailEL = document.querySelector("#email-input").value;
-    const men_haircutEL = document.querySelector("#men_haircut").checked;
-    const shaveEL = document.querySelector("#shave").checked;
-    const cosmo_bioEL = document.querySelector("#cosmo-bio").value;
+    const passwordEl = document.querySelector("#pw-input").value;
+    const mobile_numberEl = document.querySelector("#mn-input").value;
+    const emailEl = document.querySelector("#email-input").value;
+    const men_haircutEl = document.querySelector("#men_haircut").checked;
+    const shaveEl = document.querySelector("#shave").checked;
+    const cosmo_bioEl = document.querySelector("#cosmo-bio").value;
 
-    console.log(first_nameEl, last_nameEl, user_nameEl, mobile_numberEL, emailEL, cosmo_bioEL);
-    console.log(men_haircutEL);
-    console.log(shaveEL);
+    console.log(first_nameEl, last_nameEl, user_nameEl, mobile_numberEl, emailEl, cosmo_bioEl);
+    console.log(men_haircutEl);
+    console.log(shaveEl);
+
+    fetch("/api/cosmo", {
+        method: "post",
+        body: JSON.stringify({
+            first_name: first_nameEl,
+            last_name: last_nameEl,
+            user_name: user_nameEl,
+            password: passwordEl,
+            mobile_number: mobile_numberEl,
+            email: emailEl,
+            men_haircut: men_haircutEl,
+            shave: shaveEl,
+            cosmo_bio: cosmo_bioEl
+        }),
+        headers: { "Content-Type": "application/json" }
+    })
+        .then(function () {
+            document.location.replace("/");
+        })
+        .catch(err => console.log(err));
 
     // Reset all form input entries once it's been submitted
     formEl.reset();
+
+
 };
 
 // function contactFormSubmission(event) {
@@ -29,7 +51,7 @@ function cosmoFormSubmission(event) {
 //     event.preventDefault();
 
 //     const formData = new FormData(formEl);
-    
+
 //     console.log(formData);
 
 //     // Reset all form input entries once it's been submitted
