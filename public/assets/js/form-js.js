@@ -60,4 +60,4 @@ function cosmoFormSubmission(event) {
 
 // When the submit button is clicked, call the contactFormSubmission function
 // contactSubmitBtn.addEventListener("click", contactFormSubmission);
-cosmoSubmitBtn.addEventListener("click", cosmoFormSubmission);
+cosmoSubmitBtn.addEventListener("click", cosmoFormSubmission);n
