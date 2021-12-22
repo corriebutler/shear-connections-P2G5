@@ -12,8 +12,10 @@ function cosmoFormSubmission(event) {
     const passwordEl = document.querySelector("#pw-input").value;
     const mobile_numberEl = document.querySelector("#mn-input").value;
     const emailEl = document.querySelector("#email-input").value;
+    const locationEl = document.querySelector("#location-input").value;
     const men_haircutEl = document.querySelector("#men_haircut").checked;
     const shaveEl = document.querySelector("#shave").checked;
+    const women_haircutEl = document.querySelector("#women_haircut").checked;
     const cosmo_bioEl = document.querySelector("#cosmo-bio").value;
 
     console.log(first_nameEl, last_nameEl, user_nameEl, mobile_numberEl, emailEl, cosmo_bioEl);
@@ -29,8 +31,10 @@ function cosmoFormSubmission(event) {
             password: passwordEl,
             mobile_number: mobile_numberEl,
             email: emailEl,
+            location: locationEl,
             men_haircut: men_haircutEl,
             shave: shaveEl,
+            women_haircut: women_haircutEl,
             cosmo_bio: cosmo_bioEl
         }),
         headers: { "Content-Type": "application/json" }
@@ -60,4 +64,4 @@ function cosmoFormSubmission(event) {
 
 // When the submit button is clicked, call the contactFormSubmission function
 // contactSubmitBtn.addEventListener("click", contactFormSubmission);
-cosmoSubmitBtn.addEventListener("click", cosmoFormSubmission);n
+cosmoSubmitBtn.addEventListener("click", cosmoFormSubmission);

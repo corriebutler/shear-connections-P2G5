@@ -41,10 +41,6 @@ Cosmo.init (
             type: DataTypes.STRING,
             allowNull: false
         },
-        specialties: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
         location: {
             type: DataTypes.STRING,
             allowNull: false
