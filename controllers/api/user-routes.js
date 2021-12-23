@@ -1,35 +1,23 @@
 const router = require('express').Router();
-const { Cosmo, Rating } = require('../../models');
+const { User, Rating } = require('../../models');
 
 router.get('/', (req, res) => {
-    Cosmo.findAll().then((cosmoData) => {
-      res.json(cosmoData);
+    User.findAll().then((userData) => {
+      res.json(userData);
     });
   });
 
   router.get('/:id', (req, res) => {
-    Cosmo.findByPk(req.params.id).then((cosmoData) => {
-      res.json(cosmoData);
+    User.findByPk(req.params.id).then((userData) => {
+      res.json(userData);
     });
   });
 
-  //get route for all cosmos in a city
-  router.get('/city/:city', (req, res) => {
-    Cosmo.findAll({
-      order: ['name'],
-      where: {
-        location: req.params.city
-      }
-    }).then((bookData) => {
-      res.json(bookData);
-    });
-  });
 
 router.post('/', (req, res) => {
-  
-    Cosmo.create(req.body)
-      .then((newCosmo) => {
-        res.json(newCosmo);
+    User.create(req.body)
+      .then((newUser) => {
+        res.json(newUser);
       })
       .catch((err) => {
         res.json(err);
@@ -38,13 +26,13 @@ router.post('/', (req, res) => {
 
   router.post('/login', (req, res) => {
     
-      Cosmo.findOne({
+      User.findOne({
         where: {
           user_name: req.body.user_name
         }
       }).then(dbUserData => {
         if (!dbUserData) {
-          res.status(400).json({ message: 'No Cosmo with that user name!' });
+          res.status(400).json({ message: 'No User with that User name!' });
           return;
         }
     
@@ -62,7 +50,7 @@ router.post('/', (req, res) => {
 
     router.put('/:id', (req, res) => {
      
-      Cosmo.update(req.body, {
+      User.update(req.body, {
         individualHooks: true,
         where: {
           id: req.params.id
@@ -82,14 +70,14 @@ router.post('/', (req, res) => {
     });
 
     router.delete('/:id', (req, res) => {
-      Cosmo.destroy({
+      User.destroy({
         where: {
           id: req.params.id
         }
       })
         .then(dbUserData => {
           if (!dbUserData) {
-            res.status(404).json({ message: 'No user found with this id' });
+            res.status(404).json({ message: 'No User found with this id' });
             return;
           }
           res.json(dbUserData);
