@@ -1,5 +1,6 @@
 const Cosmo = require('./Cosmo');
 const Rating = require('./Rating');
+const User = require('./Rating');
 
 
 Cosmo.hasMany(Rating, {
@@ -11,4 +12,4 @@ Rating.belongsTo(Cosmo, {
 });
 
 
-module.exports = { Cosmo, Rating };
+module.exports = { Cosmo, Rating, User };
