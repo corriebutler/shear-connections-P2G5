@@ -26,6 +26,7 @@ router.get('/', (req, res) => {
   });
 
 router.post('/', (req, res) => {
+  
     Cosmo.create(req.body)
       .then((newCosmo) => {
         res.json(newCosmo);

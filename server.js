@@ -10,7 +10,7 @@ const { Cosmo, Rating } = require('./models')
 // const seedAll = require('./seeds')
 
 const app = express();
-const PORT = process.env.PORT || 5500;
+const PORT = process.env.PORT || 3001;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

@@ -40,7 +40,7 @@ function cosmoFormSubmission(event) {
         headers: { 'Content-Type': 'application/json' }
     })
         .then(function () {
-            document.location.replace('/');
+            // document.location.replace('/');
         })
         .catch(err => console.log(err));
 
