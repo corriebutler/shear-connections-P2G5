@@ -5,10 +5,10 @@ const bcrypt = require('bcrypt');
 class Cosmo extends Model {
     checkPassword(loginPw) {
         return bcrypt.compareSync(loginPw, this.password);
-      }
+    }
 }
 
-Cosmo.init (
+Cosmo.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -64,14 +64,14 @@ Cosmo.init (
             async beforeCreate(newUserData) {
                 newUserData.password = await bcrypt.hash(newUserData.password, 10);
                 return newUserData;
-              },
+            },
         },
         sequelize,
         freezeTableName: true,
         underscored: true,
         modelName: 'Cosmo',
         timestamps: false
-      }
+    }
 );
 
 module.exports = Cosmo;
