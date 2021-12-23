@@ -45,4 +45,4 @@ User.init (
       }
 );
 
-module.exports = Cosmo;
+module.exports = User;

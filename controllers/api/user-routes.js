@@ -13,6 +13,7 @@ router.get('/', (req, res) => {
     });
   });
 
+
 router.post('/', (req, res) => {
     User.create(req.body)
       .then((newUser) => {

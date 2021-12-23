@@ -26,7 +26,10 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
     Rating.create({
         value: req.body.value,
-        cosmo_id: req.body.cosmo_id
+        comment: req.body.comment,
+        cosmo_id: req.body.cosmo_id,
+        user_id: req.body.user_id
+
     })
     .then(ratingData => res.json(ratingData))
     .catch(err => {
