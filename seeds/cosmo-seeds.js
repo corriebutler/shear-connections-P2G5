@@ -24,11 +24,13 @@ const cosmodata = [
       cosmo_bio: 'I am so pretty'
     },
     {
-      name: 'Connor Lawrence',
+      name: 'Connor',
+      last_name: 'Lawrence',
       user_name: 'CL',
       password: 'easypassword',
-      contact_info: 'carrier pigeon',
-      specialties: 'nose injections',
+      mobile_number: '000-000-0000',
+      email: 'connor@test.com',
+      men_haircut: true,
       location: 'Idaho',
       cosmo_bio: 'things'
     }
