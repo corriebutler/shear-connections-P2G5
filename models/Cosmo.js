@@ -16,7 +16,11 @@ Cosmo.init (
             primaryKey: true,
             autoIncrement: true
         },
-        name: {
+        first_name: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        last_name: {
             type: DataTypes.STRING,
             allowNull: false
         },
@@ -29,17 +33,26 @@ Cosmo.init (
             type: DataTypes.STRING,
             allowNull: false
         },
-        contact_info: {
+        mobile_number: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        specialties: {
+        email: {
             type: DataTypes.STRING,
             allowNull: false
         },
         location: {
             type: DataTypes.STRING,
             allowNull: false
+        },
+        men_haircut: {
+            type: DataTypes.BOOLEAN
+        },
+        shave: {
+            type: DataTypes.BOOLEAN
+        },
+        women_haircut: {
+            type: DataTypes.BOOLEAN
         },
         cosmo_bio: {
             type: DataTypes.STRING(1000),

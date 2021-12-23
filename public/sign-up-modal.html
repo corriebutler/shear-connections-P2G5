@@ -51,6 +51,14 @@
                         </div>
                         <div class="form-group">
                             <div class="col-3 col-sm-12">
+                                <label class="form-label" for="user-name">Password:</label>
+                            </div>
+                            <div class="col-9 col-sm-12">
+                                <input class="form-input" type="text" id="pw-input" placeholder="password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-3 col-sm-12">
                                 <label class="form-label" for="mobile-number">Mobile Number</label>
                             </div>
                             <div class="col-9 col-sm-12">
@@ -65,17 +73,25 @@
                                 <input class="form-input" type="text" id="email-input" placeholder="Email">
                             </div>
                         </div>
+                        <div class="form-group">
+                            <div class="col-3 col-sm-12">
+                                <label class="form-label" for="location">What city are you in?</label>
+                            </div>
+                            <div class="col-9 col-sm-12">
+                                <input class="form-input" type="text" id="location-input" placeholder="Your Location">
+                            </div>
+                        </div>
                         <label for="service-type">What services do you feel comfortable performing? (Select Multiple if
                             Desired)</label> <br>
                         <div class="form-group checkboxes">
                             <label class="form-checkbox form-inline">
-                                <input type="checkbox"><i class="form-icon"></i> Men's Hair Cut
+                                <input type="checkbox" id="men_haircut"><i class="form-icon"></i> Men's Hair Cut
                             </label>
                             <label class="form-checkbox form-inline">
-                                <input type="checkbox"><i class="form-icon"></i> Shave
+                                <input type="checkbox" id="shave"><i class="form-icon"></i> Shave
                             </label>
                             <label class="form-checkbox form-inline">
-                                <input type="checkbox"><i class="form-icon"></i> Women's Hair Cut
+                                <input type="checkbox" id="women_haircut"><i class="form-icon"></i> Women's Hair Cut
                             </label>
                             <label class="form-checkbox form-inline">
                                 <input type="checkbox"><i class="form-icon"></i> Color Service (Full Head)
@@ -100,7 +116,7 @@
                         </div>
                         <div class="form-group">
                             <label class="form-label" for="comments">Add a brief bio for yourself:</label>
-                            <textarea class="form-input" id="comments" placeholder="Add comments here..."
+                            <textarea class="form-input" id="cosmo-bio" placeholder="Add comments here..."
                                 rows="3"></textarea>
                         </div>
                         <button class="btn btn-primary" type="button" id="delete-cosmo-btn">Delete</button>
