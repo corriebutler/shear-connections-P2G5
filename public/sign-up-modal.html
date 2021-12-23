@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/modal-style.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+</head>
+
+<body>
+    <div class="modal active" id="modal-id"><button>Open</button>
+        <a href="#close" class="modal-overlay" aria-label="Close"></a>
+        <div class="modal-container">
+            <div class="modal-header">
+                <a href="#close" class="btn btn-clear float-right" aria-label="Close"></a>
+                <div class="modal-title h5">Cosmetologist Sign-up</div>
+                <div>Fill in the following to start being featured on our site!</div>
+            </div>
+            <div class="modal-body">
+                <span class="content">
+                    <form class="form-horizontal" id="signUpForm">
+                        <!-- Form Options -->
+                        <div class="form-group">
+                            <div class="col-3 col-sm-12">
+                                <label class="form-label" for="first-name">First Name</label>
+                            </div>
+                            <div class="col-9 col-sm-12">
+                                <input class="form-input" type="text" id="fn-input" placeholder="First Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-3 col-sm-12">
+                                <label class="form-label" for="last-name">Last Name</label>
+                            </div>
+                            <div class="col-9 col-sm-12">
+                                <input class="form-input" type="text" id="ln-input" placeholder="Last Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-3 col-sm-12">
+                                <label class="form-label" for="user-name">Username:</label>
+                            </div>
+                            <div class="col-9 col-sm-12">
+                                <input class="form-input" type="text" id="un-input" placeholder="username">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-3 col-sm-12">
+                                <label class="form-label" for="mobile-number">Mobile Number</label>
+                            </div>
+                            <div class="col-9 col-sm-12">
+                                <input class="form-input" type="text" id="mn-input" placeholder="Mobile Number">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-3 col-sm-12">
+                                <label class="form-label" for="email">Email</label>
+                            </div>
+                            <div class="col-9 col-sm-12">
+                                <input class="form-input" type="text" id="email-input" placeholder="Email">
+                            </div>
+                        </div>
+                        <label for="service-type">What services do you feel comfortable performing? (Select Multiple if
+                            Desired)</label> <br>
+                        <div class="form-group checkboxes">
+                            <label class="form-checkbox form-inline">
+                                <input type="checkbox"><i class="form-icon"></i> Men's Hair Cut
+                            </label>
+                            <label class="form-checkbox form-inline">
+                                <input type="checkbox"><i class="form-icon"></i> Shave
+                            </label>
+                            <label class="form-checkbox form-inline">
+                                <input type="checkbox"><i class="form-icon"></i> Women's Hair Cut
+                            </label>
+                            <label class="form-checkbox form-inline">
+                                <input type="checkbox"><i class="form-icon"></i> Color Service (Full Head)
+                            </label>
+                            <label class="form-checkbox form-inline">
+                                <input type="checkbox"><i class="form-icon"></i> Color Service (Streaks or
+                                Ballage)
+                            </label>
+                            <label class="form-checkbox form-inline">
+                                <input type="checkbox"><i class="form-icon"></i> Nail Technician
+                            </label>
+                            <label class="form-checkbox form-inline">
+                                <input type="checkbox"><i class="form-icon"></i> Hairstylist (Wedding or
+                                Event)
+                            </label>
+                            <label class="form-checkbox form-inline">
+                                <input type="checkbox"><i class="form-icon"></i> Make-up Artist
+                            </label>
+                            <label class="form-checkbox form-inline">
+                                <input type="checkbox"><i class="form-icon"></i> Eyelash Extensions
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="comments">Add a brief bio for yourself:</label>
+                            <textarea class="form-input" id="comments" placeholder="Add comments here..."
+                                rows="3"></textarea>
+                        </div>
+                        <button class="btn btn-primary" type="button" id="delete-cosmo-btn">Delete</button>
+                        <button class="btn btn-primary" type="button" id="sign-up-btn">Submit</button>
+            </div>
+            </form>
+            </span>
+        </div>
+    </div>
+    <script src="assets/js/form-js.js"></script>
+</body>
+
+</html>
