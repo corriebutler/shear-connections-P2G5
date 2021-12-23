@@ -2,20 +2,24 @@ const Cosmo = require('../models/Cosmo');
 
 const cosmodata = [
     {
-      name: 'Chad Branagan',
+      first_name: 'Chad',
+      last_name: 'Branagan',
       user_name: 'CB',
       password: 'Hello123',
-      contact_info: 'alkdhfalkjdhfaj',
-      specialties: 'this or that',
+      mobile_number: '000-000-0000',
+      email: 'chad@test.com',
+      men_haircut: true,
       location: 'SoJo',
       cosmo_bio: 'stuff'
     },
     {
-      name: 'Marcus Ikegami',
+      first_name: 'Marcus',
+      last_name: 'Ikegami',
       user_name: 'MI',
       password: '1234567',
-      contact_info: 'asdfasdfdsfajdhfaj',
-      specialties: 'this and sometimes that',
+      mobile_number: '000-000-0000',
+      email: 'marcus@test.com',
+      shave: false,
       location: 'SLC',
       cosmo_bio: 'I am so pretty'
     },
