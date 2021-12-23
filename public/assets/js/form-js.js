@@ -23,7 +23,7 @@ function cosmoFormSubmission(event) {
     console.log(shaveEl);
 
     fetch("/api/cosmo", {
-        method: "post",
+        method: 'POST',
         body: JSON.stringify({
             first_name: first_nameEl,
             last_name: last_nameEl,
@@ -37,15 +37,17 @@ function cosmoFormSubmission(event) {
             women_haircut: women_haircutEl,
             cosmo_bio: cosmo_bioEl
         }),
-        headers: { "Content-Type": "application/json" }
+        headers: { 'Content-Type': 'application/json' }
     })
         .then(function () {
-            document.location.replace("/");
+            document.location.replace('/');
         })
         .catch(err => console.log(err));
 
     // Reset all form input entries once it's been submitted
     formEl.reset();
+
+    
 
 
 };
