@@ -1,5 +1,3 @@
-const { response } = require("express");
-
 const locateBtn = document.querySelector("#locate-btn")
 
 function cosmoSearch(event) {
@@ -12,10 +10,9 @@ function cosmoSearch(event) {
        
     
         
-        .then(function () {
-            console.log(response)
-        })
-        .catch(err => console.log(err));
+        .then(response => response.json())
+        .then(data => console.log(data));
+            
 
 }
 
