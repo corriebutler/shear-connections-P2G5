@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Cosmo, Rating } = require('../../models');
+const { Cosmo, Rating, User } = require('../../models');
 
 router.get('/', (req, res) => {
     Cosmo.findAll().then((cosmoData) => {
@@ -16,12 +16,15 @@ router.get('/', (req, res) => {
   //get route for all cosmos in a city
   router.get('/city/:city', (req, res) => {
     Cosmo.findAll({
-      order: ['name'],
+      order: ['last_name'],
       where: {
         location: req.params.city
       }
-    }).then((bookData) => {
-      res.json(bookData);
+    }).then((cosmoData) => {
+      res.json(cosmoData);
+    }).catch(err => {
+      console.log(err);
+      res.status(500).json(err);
     });
   });
 

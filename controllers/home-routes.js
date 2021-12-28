@@ -2,7 +2,7 @@ const router = require('express').Router();
 const path = require('path')
 
 
-router.get('tranquil-sea-30993.herokuapp.com/', (req, res) => {
+router.get('/', (req, res) => {
     res.json({ message: 'hello' });
 });
 
