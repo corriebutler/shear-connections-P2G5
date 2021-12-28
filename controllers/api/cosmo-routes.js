@@ -20,8 +20,8 @@ router.get('/', (req, res) => {
       where: {
         location: req.params.city
       }
-    }).then((bookData) => {
-      res.json(bookData);
+    }).then((cosmoData) => {
+      res.json(cosmoData);
     });
   });
 
