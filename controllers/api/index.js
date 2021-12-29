@@ -5,7 +5,7 @@ const userRoutes = require('./user-routes');
 
 router.use('/cosmo', cosmoRoutes);
 router.use('/ratings', ratingRoutes);
-router.use('/user', userRoutes);
+router.use('/users', userRoutes);
 
 
 module.exports = router;
