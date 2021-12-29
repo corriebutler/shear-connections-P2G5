@@ -13,6 +13,10 @@ router.get('/', (req, res) => {
     });
   });
 
+  router.get('/login', (req, res) => {
+    res.render('login');
+  })
+
 
 router.post('/', (req, res) => {
     User.create(req.body)
@@ -23,6 +27,8 @@ router.post('/', (req, res) => {
         res.json(err);
       });
   });
+
+
 
   router.post('/login', (req, res) => {
     
