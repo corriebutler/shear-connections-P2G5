@@ -1,34 +1,41 @@
 const router = require('express').Router();
-const { User, Rating } = require('../../models');
+const { User, Rating, Cosmo } = require('../../models');
 
 router.get('/', (req, res) => {
-    User.findAll().then((userData) => {
-      res.json(userData);
-    });
+
+  console.log(req.session.user_id);
+
+    User.findAll({
+      attributes: { exclude: ['password'] }
+    }).then((userData) => res.json(userData));
   });
 
   router.get('/:id', (req, res) => {
-    User.findByPk(req.params.id).then((userData) => {
-      res.json(userData);
-    });
+    User.findOne({
+      attributes: { exclude: ['password'] },
+      where: {
+          id: req.params.id
+      }
+    })
+      .then((userData) =>res.json(userData));
   });
+
+  
 
 
 router.post('/', (req, res) => {
     User.create(req.body)
-      .then((newUser) => {
-        res.json(newUser);
-      })
-      .catch((err) => {
-        res.json(err);
-      });
+      .then((newUser) => res.json(newUser))
+      .catch((err) => res.json(err));
   });
+
+
 
   router.post('/login', (req, res) => {
     
       User.findOne({
         where: {
-          user_name: req.body.user_name
+          username: req.body.username
         }
       }).then(dbUserData => {
         if (!dbUserData) {
@@ -42,9 +49,14 @@ router.post('/', (req, res) => {
           res.status(400).json({ message: 'Incorrect password!' });
           return;
         }
-        
-        res.json({ user: dbUserData, message: 'You are now logged in!' });
-    
+        req.session.save(() => {
+          req.session.user_id = dbUserData.id;
+          req.session.username = dbUserData.username;
+          req.session.loggedIn = true;
+
+          res.json({ user: dbUserData, message: 'You are now logged in!' });
+
+        });
       });  
     });
 

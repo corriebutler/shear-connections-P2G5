@@ -8,7 +8,7 @@ function cosmoFormSubmission(event) {
 
     const first_nameEl = document.querySelector("#fn-input").value;
     const last_nameEl = document.querySelector("#ln-input").value;
-    const user_nameEl = document.querySelector("#un-input").value;
+    const usernameEl = document.querySelector("#un-input").value;
     const passwordEl = document.querySelector("#pw-input").value;
     const mobile_numberEl = document.querySelector("#mn-input").value;
     const emailEl = document.querySelector("#email-input").value;
@@ -18,7 +18,7 @@ function cosmoFormSubmission(event) {
     const women_haircutEl = document.querySelector("#women_haircut").checked;
     const cosmo_bioEl = document.querySelector("#cosmo-bio").value;
 
-    console.log(first_nameEl, last_nameEl, user_nameEl, mobile_numberEl, emailEl, cosmo_bioEl);
+    console.log(first_nameEl, last_nameEl, usernameEl, mobile_numberEl, emailEl, cosmo_bioEl);
     console.log(men_haircutEl);
     console.log(shaveEl);
 
@@ -27,7 +27,7 @@ function cosmoFormSubmission(event) {
         body: JSON.stringify({
             first_name: first_nameEl,
             last_name: last_nameEl,
-            user_name: user_nameEl,
+            username: usernameEl,
             password: passwordEl,
             mobile_number: mobile_numberEl,
             email: emailEl,

@@ -10,10 +10,9 @@ function cosmoSearch(event) {
        
     
         
-        .then(function () {
-            console.log(response)
-        })
-        .catch(err => console.log(err));
+        .then(response => response.json())
+        .then(data => console.log(data));
+            
 
 }
 

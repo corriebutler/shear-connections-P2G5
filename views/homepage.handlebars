@@ -1,0 +1,72 @@
+<section>
+           <div class="modal-title h3">Locate a Cosmetologist Today!</div>
+       </section>
+       <!-- search button -->
+    <section id="search" class="search">
+        <div class="input-group input-inline">
+            <input class="form-input" type="text" placeholder="Search Your Area">
+            <button class="btn btn-primary input-group-btn">Search</button>
+        </div>
+         <!-- dropdown button -->
+         <div class="dropdown">
+            <div class="btn-group">
+            <a href="#" class="btn">Filters</a>
+            <a href="#" class="btn dropdown-toggle" tabindex="0"><i class="icon icon-caret"></i>
+            </a>  
+      <!-- menu component -->
+      <ul class="menu">
+        ...
+      </ul>
+    </div>
+  </div>
+</section>
+   <!-- containers --> 
+   
+    <div id="container" class="columns">
+        {{#each cosmos }}
+        <div class="column col-4 col-xs-12">
+            <div class="panel">
+                <div class="panel-header text-center">
+                    <div class="panel-title h5 mt-10">{{first_name}} {{last_name}}</div>
+                    <div class="panel-subtitle">{{cosmo_bio}}</div>
+                    <nav class="panel-nav">
+                        <ul class="tab tab-block">
+                            <li class="tab-item active">
+                                <a href="#profile">Profile</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="panel-body">
+                        <div class="tile tile-centered">
+                            <div class="tile-content">
+                                <div class="tile-title text-bold">E-mail</div>
+                                <div class="tile-subtitle">{{email}}</div>
+                            </div>
+                        </div>
+                        <div class="tile tile-centered">
+                            <div class="tile-content">
+                                <div class="tile-title text-bold">Specialty</div>
+                                <div class="tile-subtitle">sample</div>
+                            </div>
+                        </div>
+                        <div class="tile tile-centered">
+                            <div class="tile-content">
+                                <div class="tile-title text-bold">Location</div>
+                                <div class="tile-subtitle">{{location}}</div>
+                            </div>
+                        </div>
+                        <div class="tile tile-centered">
+                            <div class="tile-content">
+                                <div class="tile-title text-bold">Rating</div>
+                                <div class="tile-subtitle">*****</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <button class="btn btn-primary btn-block">Book Appointment</button>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
