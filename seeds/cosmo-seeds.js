@@ -4,7 +4,7 @@ const cosmodata = [
   {
     first_name: 'Chad',
     last_name: 'Branagan',
-    user_name: 'CB',
+    username: 'CB',
     password: 'Hello123',
     mobile_number: '000-000-0000',
     email: 'chad@test.com',
@@ -15,7 +15,7 @@ const cosmodata = [
   {
     first_name: 'Marcus',
     last_name: 'Ikegami',
-    user_name: 'MI',
+    username: 'MI',
     password: '1234567',
     mobile_number: '000-000-0000',
     email: 'marcus@test.com',
@@ -26,7 +26,7 @@ const cosmodata = [
   {
     first_name: 'Connor',
     last_name: 'Lawrence',
-    user_name: 'CL',
+    username: 'CL',
     password: 'easypassword',
     mobile_number: '000-000-0000',
     email: 'connor@test.com',

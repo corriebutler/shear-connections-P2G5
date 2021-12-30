@@ -8,7 +8,7 @@ router.get('/home', (req, res) => {
 
     }).then(cosmoData => {
         const cosmos = cosmoData.map(cosmo => cosmo.get({ plain: true }));
-        console.log(cosmos);
+        
         res.render('homepage', { cosmos });
     })
     .catch(err => {

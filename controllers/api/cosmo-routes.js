@@ -40,7 +40,7 @@ router.post('/', (req, res) => {
     
       Cosmo.findOne({
         where: {
-          user_name: req.body.user_name
+          username: req.body.username
         }
       }).then(dbUserData => {
         if (!dbUserData) {
