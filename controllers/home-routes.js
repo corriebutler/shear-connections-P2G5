@@ -19,4 +19,7 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
+router.get("/cosmosignup", (req, res) => {
+  res.render("cosmosignup");
+});
 module.exports = router;

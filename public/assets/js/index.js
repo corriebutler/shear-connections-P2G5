@@ -17,3 +17,6 @@ function cosmoSearch(event) {
 }
 
 locateBtn.addEventListener("click", cosmoSearch)
+
+
+
