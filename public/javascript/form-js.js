@@ -13,7 +13,7 @@ function cosmoFormSubmission(event) {
   const mobile_numberEl = document.querySelector("#mn-input").value;
   const emailEl = document.querySelector("#email-input").value;
   const locationEl = document.querySelector("#location-input").value;
-  const specialtiesEl = document.querySelector("#specialties").checked;
+  const specialtiesEl = document.querySelector("#specialties").value;
   const cosmo_bioEl = document.querySelector("#cosmo-bio").value;
 
   fetch("/api/cosmo", {
