@@ -45,14 +45,9 @@ Cosmo.init(
             type: DataTypes.STRING,
             allowNull: false
         },
-        men_haircut: {
-            type: DataTypes.BOOLEAN
-        },
-        shave: {
-            type: DataTypes.BOOLEAN
-        },
-        women_haircut: {
-            type: DataTypes.BOOLEAN
+        specialties: {
+            type: DataTypes.STRING,
+            allowNull: false
         },
         cosmo_bio: {
             type: DataTypes.STRING(1000),

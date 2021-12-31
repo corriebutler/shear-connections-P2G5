@@ -1,19 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/modal-style.css">
-    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
-</head>
-
-<body>
-    <div class="modal active" id="modal-id"><button>Open</button>
+<div class="modal active" id="modal-id"><button>Open</button>
         <a href="#close" class="modal-overlay" aria-label="Close"></a>
         <div class="modal-container">
             <div class="modal-header">
@@ -81,39 +66,15 @@
                                 <input class="form-input" type="text" id="location-input" placeholder="Your Location">
                             </div>
                         </div>
-                        <label for="service-type">What services do you feel comfortable performing? (Select Multiple if
-                            Desired)</label> <br>
-                        <div class="form-group checkboxes">
-                            <label class="form-checkbox form-inline">
-                                <input type="checkbox" id="men_haircut"><i class="form-icon"></i> Men's Hair Cut
-                            </label>
-                            <label class="form-checkbox form-inline">
-                                <input type="checkbox" id="shave"><i class="form-icon"></i> Shave
-                            </label>
-                            <label class="form-checkbox form-inline">
-                                <input type="checkbox" id="women_haircut"><i class="form-icon"></i> Women's Hair Cut
-                            </label>
-                            <label class="form-checkbox form-inline">
-                                <input type="checkbox"><i class="form-icon"></i> Color Service (Full Head)
-                            </label>
-                            <label class="form-checkbox form-inline">
-                                <input type="checkbox"><i class="form-icon"></i> Color Service (Streaks or
-                                Ballage)
-                            </label>
-                            <label class="form-checkbox form-inline">
-                                <input type="checkbox"><i class="form-icon"></i> Nail Technician
-                            </label>
-                            <label class="form-checkbox form-inline">
-                                <input type="checkbox"><i class="form-icon"></i> Hairstylist (Wedding or
-                                Event)
-                            </label>
-                            <label class="form-checkbox form-inline">
-                                <input type="checkbox"><i class="form-icon"></i> Make-up Artist
-                            </label>
-                            <label class="form-checkbox form-inline">
-                                <input type="checkbox"><i class="form-icon"></i> Eyelash Extensions
-                            </label>
+                        <div class="form-group">
+                            <div class="col-3 col-sm-12">
+                                <label class="form-label" for="specialties">Specialties</label>
+                            </div>
+                            <div class="col-9 col-sm-12">
+                                <input class="form-input" type="text" id="specialties" placeholder="Specialties">
+                            </div>
                         </div>
+                        
                         <div class="form-group">
                             <label class="form-label" for="comments">Add a brief bio for yourself:</label>
                             <textarea class="form-input" id="cosmo-bio" placeholder="Add comments here..."
@@ -126,7 +87,4 @@
             </span>
         </div>
     </div>
-    <script src="./assets/js/form-js.js"></script>
-</body>
-
-</html>
+    <script src='/javascript/form-js.js'></script>
