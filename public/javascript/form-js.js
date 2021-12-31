@@ -1,4 +1,4 @@
-const contactSubmitBtn = document.querySelector("#contact-btn");
+const cancelBtn = document.querySelector("#cancel-btn");
 const cosmoSubmitBtn = document.querySelector("#sign-up-btn");
 const formEl = document.querySelector("#signUpForm");
 
@@ -40,4 +40,11 @@ function cosmoFormSubmission(event) {
   formEl.reset();
 }
 
+function cancelBtnSubmission(event) {
+  event.preventDefault();
+
+  document.location.replace("/home");
+}
+
 cosmoSubmitBtn.addEventListener("click", cosmoFormSubmission);
+cancelBtn.addEventListener("click", cancelBtnSubmission);
