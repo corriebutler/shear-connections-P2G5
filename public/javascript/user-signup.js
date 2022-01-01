@@ -1,17 +1,17 @@
+const signUpBtn = document.querySelector("#sign-up-btn");
 const cancelBtn = document.querySelector("#cancel-btn");
-const loginBtn = document.querySelector("#login-btn-modal");
 
-function loginFormHandler(event) {
+function signUpFormHandler(event) {
   event.preventDefault();
 
-  const userName = document.querySelector("#username").value.trim();
-  const password = document.querySelector("#pw-input").value.trim();
+  const usernameEl = document.querySelector("#un-input").value;
+  const passwordEl = document.querySelector("#pw-input").value;
 
-  fetch("/api/users/login", {
+  fetch("/api/users", {
     method: "POST",
     body: JSON.stringify({
-      username: userName,
-      password: password,
+      username: usernameEl,
+      password: passwordEl,
     }),
     headers: { "Content-Type": "application/json" },
   })
@@ -27,5 +27,5 @@ function cancelBtnSubmission(event) {
   document.location.replace("/home");
 }
 
-loginBtn.addEventListener("click", loginFormHandler);
+signUpBtn.addEventListener("click", signUpFormHandler);
 cancelBtn.addEventListener("click", cancelBtnSubmission);

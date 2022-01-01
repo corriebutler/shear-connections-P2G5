@@ -39,6 +39,7 @@
       <section class="navbar-section just">
         <a href="/login" class="btn btn-lg col-3 m-1" id="login-btn">Login</a>
         <a href="/cosmosignup" class="btn btn-lg col-3 m-1">Cosmo Sign Up</a>
+        <a href="/usersignup" class="btn btn-lg col-3 m-1">New User Sign Up</a>
         <a href="" id="modalBtn" class="btn btn-lg col-3 m-1">Leave a review</a>
         <!-- review modal -->
         <div class="modal" id="openModal">
@@ -87,13 +88,13 @@
             </div>
           </div>
         </div>
-        <a href="#contact" class="btn btn-lg col-3 m-1">Contact</a>
+        <button class="btn btn-primary" type="submit" id="logout-btn">Log Out</button>
       </section>
     </header>
     <main>
       {{{body}}}
     </main>
-    <script src="./javascript/homepage.js"></script>
-    <script src="./assets/js/reviewModal.js"></script>
+
+    <script src="/javascript/logout.js"></script>
   </body>
 </html>
