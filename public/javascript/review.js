@@ -18,7 +18,7 @@ function reviewFormHandler(event) {
     headers: { "Content-Type": "application/json" },
   })
     .then(function () {
-      document.location.replace("/home");
+      document.location.replace("/");
     })
     .catch((err) => console.log(err));
 }
@@ -26,7 +26,7 @@ function reviewFormHandler(event) {
 function cancelBtnSubmission(event) {
   event.preventDefault();
 
-  document.location.replace("/home");
+  document.location.replace("/");
 }
 
 signUpBtn.addEventListener("click", reviewFormHandler);

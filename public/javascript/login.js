@@ -16,7 +16,7 @@ function loginFormHandler(event) {
     headers: { "Content-Type": "application/json" },
   })
     .then(function () {
-      document.location.replace("/home");
+      document.location.replace("/");
     })
     .catch((err) => console.log(err));
 }
@@ -24,7 +24,7 @@ function loginFormHandler(event) {
 function cancelBtnSubmission(event) {
   event.preventDefault();
 
-  document.location.replace("/home");
+  document.location.replace("/");
 }
 
 loginBtn.addEventListener("click", loginFormHandler);

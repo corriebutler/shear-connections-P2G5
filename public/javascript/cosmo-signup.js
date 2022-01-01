@@ -32,7 +32,7 @@ function cosmoFormSubmission(event) {
     headers: { "Content-Type": "application/json" },
   })
     .then(function () {
-      document.location.replace("/home");
+      document.location.replace("/");
     })
     .catch((err) => console.log(err));
 
@@ -43,7 +43,7 @@ function cosmoFormSubmission(event) {
 function cancelBtnSubmission(event) {
   event.preventDefault();
 
-  document.location.replace("/home");
+  document.location.replace("/");
 }
 
 cosmoSubmitBtn.addEventListener("click", cosmoFormSubmission);

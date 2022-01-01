@@ -2,7 +2,7 @@ const router = require("express").Router();
 const path = require("path");
 const { Cosmo } = require("../models");
 
-router.get("/home", (req, res) => {
+router.get("/", (req, res) => {
   Cosmo.findAll({})
     .then((cosmoData) => {
       const cosmos = cosmoData.map((cosmo) => cosmo.get({ plain: true }));
