@@ -4,7 +4,7 @@ function logout() {
     headers: { "Content-Type": "application/json" },
   })
     .then(function () {
-      document.location.replace("/home");
+      document.location.replace("/");
     })
     .catch((err) => console.log(err));
 }

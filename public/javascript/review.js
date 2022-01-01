@@ -1,17 +1,19 @@
 const signUpBtn = document.querySelector("#sign-up-btn");
 const cancelBtn = document.querySelector("#cancel-btn");
 
-function signUpFormHandler(event) {
+function reviewFormHandler(event) {
   event.preventDefault();
 
-  const usernameEl = document.querySelector("#un-input").value;
-  const passwordEl = document.querySelector("#pw-input").value;
+  const ratingEl = document.querySelector("#rating").value;
+  const cosmoIDEl = document.querySelector("#cosmoID").value;
+  const reviewEl = document.querySelector("#comment").value;
 
-  fetch("/api/users", {
+  fetch("/api/ratings", {
     method: "POST",
     body: JSON.stringify({
-      username: usernameEl,
-      password: passwordEl,
+      value: ratingEl,
+      cosmo_id: cosmoIDEl,
+      comment: reviewEl,
     }),
     headers: { "Content-Type": "application/json" },
   })
@@ -27,5 +29,5 @@ function cancelBtnSubmission(event) {
   document.location.replace("/");
 }
 
-signUpBtn.addEventListener("click", signUpFormHandler);
+signUpBtn.addEventListener("click", reviewFormHandler);
 cancelBtn.addEventListener("click", cancelBtnSubmission);

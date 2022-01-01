@@ -61,7 +61,7 @@ router.post('/', (req, res) => {
         value: req.body.value,
         comment: req.body.comment,
         cosmo_id: req.body.cosmo_id,
-        user_id: req.body.user_id
+        user_id: req.session.user_id
 
     })
     .then(ratingData => res.json(ratingData))
