@@ -26,4 +26,8 @@ router.get("/cosmosignup", (req, res) => {
 router.get("/usersignup", (req, res) => {
   res.render("usersignup");
 });
+
+router.get("/review", (req, res) => {
+  res.render("review");
+});
 module.exports = router;
