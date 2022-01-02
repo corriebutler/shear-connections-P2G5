@@ -36,11 +36,11 @@
         </h1>
       </section>
       <section class="navbar-section just">
-        {{#if loggedIn}}
-          <a href="/review" id="reviewBtn" class="btn btn-lg col-3 m-1">Leave a
-            review</a>
-          <button class="btn btn-primary" type="submit" id="logout-btn">Log Out</button>
-        {{/if}}
+
+        <a href="/review" id="reviewBtn" class="btn btn-lg col-3 m-1">Leave a
+          review</a>
+        <button class="btn btn-primary" type="submit" id="logout-btn">Log Out</button>
+
         <a href="/login" class="btn btn-lg col-3 m-1" id="login-btn">Login</a>
         <a href="/cosmosignup" class="btn btn-lg col-3 m-1">Cosmo Sign Up</a>
         <a href="/usersignup" class="btn btn-lg col-3 m-1">New User Sign Up</a>
@@ -50,8 +50,8 @@
     <main>
       {{{body}}}
     </main>
-    {{#if loggedIn}}
-      <script src="/javascript/logout.js"></script>
-    {{/if}}
+
+    <script src="/javascript/logout.js"></script>
+
   </body>
 </html>
