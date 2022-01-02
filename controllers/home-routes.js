@@ -1,9 +1,24 @@
 const router = require("express").Router();
 const path = require("path");
-const { Cosmo } = require("../models");
+const { Cosmo, User, Rating } = require("../models");
 
 router.get("/", (req, res) => {
-  Cosmo.findAll({})
+  Cosmo.findAll({
+    include: [
+      {
+        model: Rating,
+        attributes: ["id", "user_id", "cosmo_id", "value", "comment"],
+        include: {
+          model: User,
+          attributes: ["username"],
+        },
+      },
+      {
+        model: User,
+        attributes: ["username"],
+      },
+    ],
+  })
     .then((cosmoData) => {
       const cosmos = cosmoData.map((cosmo) => cosmo.get({ plain: true }));
 

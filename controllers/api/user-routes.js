@@ -46,23 +46,26 @@ router.post("/login", (req, res) => {
       req.session.username = dbUserData.username;
       req.session.loggedIn = true;
 
-      res.json({ user: dbUserData, message: "You are now logged in!" });
+      res.json({
+        user: dbUserData,
+        message: "You are now logged in!",
+        loggedIn: req.session.loggedIn,
+      });
     });
 
     console.log(dbUserData);
   });
 });
 
-router.post('/logout', (req, res) => {
+router.post("/logout", (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
       res.status(204).end();
-    })
-  }
-  else {
+    });
+  } else {
     res.status(404).end();
   }
-})
+});
 
 router.put("/:id", (req, res) => {
   User.update(req.body, {
