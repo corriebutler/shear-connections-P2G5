@@ -3,17 +3,22 @@
     <div class="column col-8 col-xs-12">
       <div class="panel">
         <div class="panel-header text-center">
-          <div class="panel-title h5 mt-10">{{post.first_name}}
+          <div class="panel-title h5 mt-10 text-bold">{{post.first_name}}  
             {{post.last_name}}
-            Cosmo ID#{{id}}</div>
+            </div>
           <div class="panel-subtitle">{{post.cosmo_bio}}</div>
           <nav class="panel-nav">
             <ul class="tab tab-block">
-              <li class="tab-item active">
-                <a href="#profile">Profile</a>
-              </li>
+              
             </ul>
           </nav>
+          <div class="panel-body">
+            <div class="tile tile-centered">
+              <div class="tile-content">
+                <div class="tile-title text-bold">Cosmo ID</div>
+                <div class="tile-subtitle">{{post.id}}</div>
+              </div>
+            </div>
           <div class="panel-body">
             <div class="tile tile-centered">
               <div class="tile-content">
@@ -37,7 +42,7 @@
               <div class="tile-content">
                 <div class="tile-title text-bold">Reviews</div>
                 {{#each post.ratings}}
-                  <div class="tile-subtitle">Review left by:{{User.username}}
+                  <div class="tile">Review left by:{{User.username}}
                     {{comment}}</div>
                 {{/each}}
               </div>
