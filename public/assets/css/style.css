@@ -11,17 +11,9 @@
 
 header {
     background-color: var(--secondary-color);
-    padding-bottom: 50px;
-    padding-top: 30px;
+   
 }
 
-header section h1 a {
-    color: white;
-    margin: 5px;
-    padding: 20px;
-    align-items: left;
-    font-family: 'Kalam';font-size: 22px;
-}
 
 body {
     text-align: center;
