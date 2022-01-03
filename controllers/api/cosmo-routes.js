@@ -23,8 +23,27 @@ router.get("/", (req, res) => {
 });
 
 router.get("/:id", (req, res) => {
-  Cosmo.findByPk(req.params.id).then((cosmoData) => {
-    res.json(cosmoData);
+  Cosmo.findOne({
+    where:{
+      id: req.params.id
+    },
+    include: [
+      {
+        model: Rating,
+        attributes: ["id", "user_id", "cosmo_id", "value", "comment"],
+        include: {
+          model: User,
+          attributes: ["username"],
+        },
+      },
+      
+    ],
+  })
+      .then((cosmoData) => {
+        const post = cosmoData.get({ plain: true });
+        // res.json(post);
+        res.render('single-cosmo', { post });
+
   });
 });
 
