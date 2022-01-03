@@ -1,0 +1,90 @@
+<div class="modal active" id="modal-id"><button>Open</button>
+        <a href="#close" class="modal-overlay" aria-label="Close"></a>
+        <div class="modal-container">
+            <div class="modal-header">
+                <a href="/" class="btn btn-clear float-right" aria-label="Close"></a>
+                <div class="modal-title h5">Cosmetologist Sign-up</div>
+                <div>Fill in the following to start being featured on our site!</div>
+            </div>
+            <div class="modal-body">
+                <span class="content">
+                    <form class="form-horizontal" id="signUpForm">
+                        <!-- Form Options -->
+                        <div class="form-group">
+                            <div class="col-3 col-sm-12">
+                                <label class="form-label" for="first-name">First Name</label>
+                            </div>
+                            <div class="col-9 col-sm-12">
+                                <input class="form-input" type="text" id="fn-input" placeholder="First Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-3 col-sm-12">
+                                <label class="form-label" for="last-name">Last Name</label>
+                            </div>
+                            <div class="col-9 col-sm-12">
+                                <input class="form-input" type="text" id="ln-input" placeholder="Last Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-3 col-sm-12">
+                                <label class="form-label" for="user-name">Username:</label>
+                            </div>
+                            <div class="col-9 col-sm-12">
+                                <input class="form-input" type="text" id="un-input" placeholder="username">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-3 col-sm-12">
+                                <label class="form-label" for="user-name">Password:</label>
+                            </div>
+                            <div class="col-9 col-sm-12">
+                                <input class="form-input" type="text" id="pw-input" placeholder="password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-3 col-sm-12">
+                                <label class="form-label" for="mobile-number">Mobile Number</label>
+                            </div>
+                            <div class="col-9 col-sm-12">
+                                <input class="form-input" type="text" id="mn-input" placeholder="Mobile Number">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-3 col-sm-12">
+                                <label class="form-label" for="email">Email</label>
+                            </div>
+                            <div class="col-9 col-sm-12">
+                                <input class="form-input" type="text" id="email-input" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-3 col-sm-12">
+                                <label class="form-label" for="location">What city are you in?</label>
+                            </div>
+                            <div class="col-9 col-sm-12">
+                                <input class="form-input" type="text" id="location-input" placeholder="Your Location">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-3 col-sm-12">
+                                <label class="form-label" for="specialties">Specialties</label>
+                            </div>
+                            <div class="col-9 col-sm-12">
+                                <input class="form-input" type="text" id="specialties" placeholder="Specialties">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="comments">Add a brief bio for yourself:</label>
+                            <textarea class="form-input" id="cosmo-bio" placeholder="Add comments here..."
+                                rows="3"></textarea>
+                        </div>
+                        <button class="btn btn-primary" type="button" id="cancel-btn">Cancel</button>
+                        <button class="btn btn-primary" type="submit" id="sign-up-btn">Submit</button>
+            </div>
+            </form>
+            </span>
+        </div>
+    </div>
+    <script src='/javascript/cosmo-signup.js'></script>
