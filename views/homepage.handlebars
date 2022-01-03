@@ -36,7 +36,9 @@
           <nav class="panel-nav">
             <ul class="tab tab-block">
               <li class="tab-item active">
-                <a href="/api/cosmo/{{id}}"><button class="btn no-style">Profile</button></a>
+                <a href="/api/cosmo/{{id}}"><button
+                    class="btn no-style"
+                  >Profile</button></a>
               </li>
             </ul>
           </nav>
@@ -45,6 +47,12 @@
               <div class="tile-content">
                 <div class="tile-title text-bold">E-mail</div>
                 <div class="tile-subtitle">{{email}}</div>
+              </div>
+            </div>
+            <div class="tile tile-centered">
+              <div class="tile-content">
+                <div class="tile-title text-bold">Phone Number</div>
+                <div class="tile-subtitle">{{mobile_number}}</div>
               </div>
             </div>
             <div class="tile tile-centered">
@@ -71,11 +79,11 @@
           </div>
         </div>
         <div class="panel-footer">
-          
+
           <button class="btn btn-primary btn-block">Book Appointment</button>
         </div>
       </div>
     </div>
   {{/each}}
 </div>
-<script src='/javascript/profile.js'></script>
+<script src="/javascript/profile.js"></script>
