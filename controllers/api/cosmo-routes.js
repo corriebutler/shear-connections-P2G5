@@ -24,8 +24,8 @@ router.get("/", (req, res) => {
 
 router.get("/:id", (req, res) => {
   Cosmo.findOne({
-    where:{
-      id: req.params.id
+    where: {
+      id: req.params.id,
     },
     include: [
       {
@@ -36,14 +36,11 @@ router.get("/:id", (req, res) => {
           attributes: ["username"],
         },
       },
-      
     ],
-  })
-      .then((cosmoData) => {
-        const post = cosmoData.get({ plain: true });
-        // res.json(post);
-        res.render('single-cosmo', { post });
-
+  }).then((cosmoData) => {
+    const post = cosmoData.get({ plain: true });
+    // res.json(post);
+    res.render("single-cosmo", { post });
   });
 });
 
@@ -65,13 +62,25 @@ router.get("/city/:city", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  Cosmo.create(req.body)
-    .then((newCosmo) => {
-      res.json(newCosmo);
-    })
-    .catch((err) => {
-      res.json(err);
-    });
+  if (
+    first_name &&
+    last_name &&
+    username &&
+    password &&
+    mobile_number &&
+    email &&
+    location &&
+    specialties &&
+    cosmo_bio
+  ) {
+    Cosmo.create(req.body)
+      .then((newCosmo) => {
+        res.json(newCosmo);
+      })
+      .catch((err) => {
+        res.json(err);
+      });
+  }
 });
 
 router.post("/login", (req, res) => {

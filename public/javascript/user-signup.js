@@ -4,8 +4,8 @@ const cancelBtn = document.querySelector("#cancel-btn");
 function signUpFormHandler(event) {
   event.preventDefault();
 
-  const usernameEl = document.querySelector("#un-input").value;
-  const passwordEl = document.querySelector("#pw-input").value;
+  const usernameEl = document.querySelector("#un-input").value.trim();
+  const passwordEl = document.querySelector("#pw-input").value.trim();
 
   fetch("/api/users", {
     method: "POST",
